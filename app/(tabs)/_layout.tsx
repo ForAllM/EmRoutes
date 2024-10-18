@@ -67,6 +67,23 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
+          name="profile"
+          component={profile}
+          options={{
+            title: "Profile",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icons={icons.profile}
+                color={color}
+                name="Info"
+                focused={focused}
+                size="w-6 h-6"
+              />
+            ),
+          }}
+        />
+      <Tabs.Screen
         name="bookmark"
         component={bookmark}
         options={{
@@ -77,23 +94,6 @@ const TabsLayout = () => {
               icons={icons.bookmark}
               color={color}
               name="Bookmarks"
-              focused={focused}
-              size="w-6 h-6"
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        component={profile}
-        options={{
-          title: "Profile",
-          headerShown: false,
-          tabBarIcon: ({ color, focused }) => (
-            <TabIcon
-              icons={icons.profile}
-              color={color}
-              name="Profile"
               focused={focused}
               size="w-6 h-6"
             />
