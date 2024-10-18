@@ -61,17 +61,17 @@ const Profile = () => {
 
                   <View className="">
                     {details.map((items, index) => (
-                      <>
+                      <View key={index}>
                         <Text className="font-satbold text-3xl">
                           {items.name}
                         </Text>
-                        <Text className="font-satbold text-xl">
+                        <Text  className="font-satbold text-xl">
                         <Text className="font-satlight">Blood Group: </Text>{items.bloodGroup}
                         </Text>
-                        <Text  className="font-satbold text-xl">
+                        <Text   className="font-satbold text-xl">
                         <Text className="font-satlight">Age: </Text>{items.age}
                         </Text>
-                        <Text className="font-satbold text-xl">
+                        <Text  className="font-satbold text-xl">
                         <Text className="font-satlight">Gender: </Text>{items.gender}
                         </Text>
                         <Text className="font-satbold text-xl">
@@ -83,7 +83,7 @@ const Profile = () => {
                         <Text  className="font-satbold text-xl">
                           <Text className="font-satlight">Address: </Text>{items.address}
                         </Text>
-                      </>
+                      </View>
                     ))}
                   </View>
                 </View>
