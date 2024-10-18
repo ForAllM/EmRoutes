@@ -220,15 +220,16 @@ const Home = () => {
   };
 
   const handleGoBack = () => {
-    if (stage === "searching") {
-      setStage("initial");
-    } else if (stage === "found") {
-      setStage("searching");
-    } else if (stage === "reached") {
-      setStage("found");
-    } else if (stage === "returning") {
-      setStage("reached");
-    }
+    // if (stage === "searching") {
+    //   setStage("initial");
+    // } else if (stage === "found") {
+    //   setStage("searching");
+    // } else if (stage === "reached") {
+    //   setStage("found");
+    // } else if (stage === "returning") {
+    //   setStage("reached");
+    // }
+    setStage("initial");
   };
 
   useEffect(() => {
@@ -323,6 +324,7 @@ const Home = () => {
                     alignItems: "center",
                     marginTop: 16,
                   }}
+                  // onPress={() => setStage("initial")}
                 >
                   <Text style={{ color: "white", fontWeight: "bold" }}>
                     Go Back
