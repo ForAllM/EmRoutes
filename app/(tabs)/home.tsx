@@ -208,7 +208,7 @@ const Home = () => {
   const [patientCondition, setPatientCondition] = useState("Stable");
 
   const origin = { latitude: 25.2590734, longitude: 87.0395847 };
-  const destination = { latitude: 25.2519072, longitude: 87.0189557 };
+  const destination = { latitude: 25.251904, longitude: 87.021887 };
 
   const handleEmergency = () => {
     setIsLoading(true);
@@ -280,14 +280,14 @@ const Home = () => {
                 marginBottom: 16,
               }}
             >
-              <View>
+              <View style={{ padding: 4 }}>
                 <Text style={{ fontSize: 16, color: "#4B5563" }}>
                   {stage === "initial" ? "Welcome Back," : "Patient:"}
                 </Text>
                 <Text
                   style={{ fontSize: 24, fontWeight: "bold", color: "#1F2937" }}
                 >
-                  {stage === "initial" ? "Vikas Sharma" : "Vipul Singh"}
+                  {stage === "initial" ? "Vikas Sharma" : "Somesh Mishra"}
                 </Text>
               </View>
               <Avatar width={60} height={60} />
